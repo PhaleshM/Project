@@ -39,7 +39,7 @@ int main(){
     send(client_socket,server_response,sizeof(server_response),0);
     printf("Sent hello for %s\n",server_response);
     // close socket
-    // pclose(server_socket);
+    // close(server_socket);
 
     return 0;
 }

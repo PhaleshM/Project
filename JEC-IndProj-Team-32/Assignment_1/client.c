@@ -41,6 +41,6 @@ int main(){
 	printf("%s\n",client_response);
 
 	// close the socket
-	// pclose(net_socket);
+	// close(net_socket);
 	return 0;
 }
