@@ -32,13 +32,18 @@ int main(){
 		printf("Connected\n");
 	}
 	char client_response[256];
+	int i=1;
+	do{
 	// send data from server
+	
 	send(net_socket,hello1,256,0);
 	printf("Sent hello %s\n",hello1);
 	// recieve data from server
 	recv(net_socket,&client_response,sizeof(client_response),0);
 	// print out the a server's response
-	printf("%s\n",client_response);
+	printf("Welcome from server, %s\n",client_response);
+	i++;
+	}while(i<=4);
 
 	// close the socket
 	// close(net_socket);

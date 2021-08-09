@@ -32,12 +32,16 @@ int main(){
     }
     
     char server_response[256];
+    int i=1;
+    do{
     char *response="hi ";
     recv(client_socket,server_response,256,0);
     printf("Hello from %s\n",server_response);
     // send message
     send(client_socket,server_response,sizeof(server_response),0);
     printf("Sent hello for %s\n",server_response);
+        i++;
+    }while(i<=4);
     // close socket
     // close(server_socket);
 
